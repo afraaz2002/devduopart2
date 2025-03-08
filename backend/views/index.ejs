@@ -1,16 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MySQL + Express + EJS</title>
+    <title>Devduo Project</title>
+    <link rel="stylesheet" href="../public/style.css">
 </head>
+
 <body>
-    <h1>User List</h1>
-    <ul>
-        <% users.forEach(user => { %>
-            <li><%= user.name %> - <%= user.email %></li>
-        <% }); %>
-    </ul>
+
+    <div class="container">
+        <nav class="flex nav">
+            <h1 class="logo">ShareAll</h1>
+            <h1>Welcome User</h1>
+        </nav>
+        <main class="main">
+            <h1>Share your experience like everyone else</h1>
+            <div class="slider">
+                <div class="slides">
+                    <img src="../public/images/img1.jpg" class="slide active">
+                    <img src="../public/images/img2.jpg" class="slide">
+                    <img src="../public/images/img3.jpg" class="slide">
+                </div>
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+            <h1>View people's posts around the world</h1>
+            <div class="posts-section">
+          
+                <div class="card">
+                    <img src="../public/images/post1.jpg" class="card-img" alt="">
+                </div>
+                <div class="card">
+                    <img src="../public/images/post1.jpg" class="card-img" alt="">
+                </div>
+                <div class="card">
+                    <img src="../public/images/post1.jpg" class="card-img" alt="">
+                </div>
+                <div class="card">
+                    <img src="../public/images/post1.jpg" class="card-img" alt="">
+                </div>
+                <div class="card">
+                    <img src="../public/images/post1.jpg" class="card-img" alt="">
+                </div>
+                <div class="card">
+                    <img src="../public/images/post1.jpg" class="card-img" alt="">
+                </div>
+            </div>
+        </main>
+        <footer>
+
+        </footer>
+
+    </div>
+
+    <script src="../public/script.js"></script>
 </body>
+
 </html>
