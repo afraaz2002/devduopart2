@@ -3,15 +3,20 @@ import session from "express-session";
 import bodyParser from "body-parser";
 import path from "path";
 import { fileURLToPath } from "url";
-import MySQLStore from "express-mysql-session";
+import mysqlSession from "express-mysql-session"; // ✅ Use default import
+import db from "./config/db.js";
 
 
 // Convert __dirname for ES modules
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+const MySQLStore = mysqlSession(session); // ✅ Initialize session store properly
 
 const app = express();
 const port = 3000;
+const sessionStore = new MySQLStore({}, db);
+
+
 
 // ✅ Middleware (Order Matters!)
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -23,6 +28,8 @@ app.use(
     secret: "adengeppa2per", // Change this to a strong secret
     resave: false,
     saveUninitialized: false,
+    store: sessionStore, // ✅ Uses MySQL for session storage
+
   })
 );
 
