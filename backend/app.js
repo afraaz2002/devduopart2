@@ -3,11 +3,15 @@ import session from "express-session";
 import bodyParser from "body-parser";
 import path from "path";
 import { fileURLToPath } from "url";
+<<<<<<< HEAD
 import mysqlSession from "express-mysql-session"; // ✅ Use default import
 import db from "./config/db.js";
+=======
+import indexRoutes from "./routes/index.js";
+import MySQLStore from "express-mysql-session";
+>>>>>>> c0419c37d89387c02af562934ba9a0f1cfad66f4
 
 
-// Convert __dirname for ES modules
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const MySQLStore = mysqlSession(session); // ✅ Initialize session store properly
@@ -18,6 +22,10 @@ const sessionStore = new MySQLStore({}, db);
 
 
 
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, "public")));
+
+app.set("view engine", "ejs");
 // ✅ Middleware (Order Matters!)
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
