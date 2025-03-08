@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add new post</title>
+    <link rel="stylesheet" href="../public/style.css">
+</head>
+<body>
+    <div class="new-post flex">
+        <form action="/new" method="POST" class="new flex" >
+            <h2>Create a new post</h2>
+            <label for="username">Title</label>
+            <input type="text" id="Title" name="Title" class="input-box" required>
+
+            <label for="email">Description</label>
+            <input type="text" id="Description" name="Description" class="input-box" required>
+    
+            <button type="submit" class="login-btn">Create</button>
+        </form>
+    </div>
+</body>
+</html>

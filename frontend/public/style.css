@@ -167,3 +167,17 @@
     margin-top: 1.5rem;
     gap: 1rem;
 }
+
+.new-post{
+    width: 50%;
+    min-height: 90vh;
+    border: 3px solid black;
+    margin: 2rem auto;
+}
+
+.new{
+   flex-direction: column;
+   align-items: flex-start;
+   font-size: 1.5rem;
+   gap: 1rem;
+}
