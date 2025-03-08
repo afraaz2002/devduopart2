@@ -13,7 +13,12 @@
     <div class="container">
         <nav class="flex nav">
             <h1 class="logo">ShareAll</h1>
-            <h1>Welcome User</h1>
+            <div class="flex">
+                <h1>Welcome User</h1>
+                <form action="/logout" method="get">
+                    <button class="login-btn" style="margin-left: 2rem;background-color: red;">Logout</button>
+                </form>
+            </div>
         </nav>
         <main class="main">
             <h1>Share your experience like everyone else</h1>
@@ -26,34 +31,39 @@
                 <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
                 <button class="next" onclick="moveSlide(1)">&#10095;</button>
             </div>
-            <h1>View people's posts around the world</h1>
+            <h1 style="margin-bottom: 2rem;">View people's posts around the world</h1>
             <div class="posts-section">
-          
+
                 <div class="card">
+                    <h2 class="card-heading">Peter Parker</h2>
                     <img src="../public/images/post1.jpg" class="card-img" alt="">
                 </div>
                 <div class="card">
+                    <h2 class="card-heading">Peter Parker</h2>
                     <img src="../public/images/post1.jpg" class="card-img" alt="">
                 </div>
                 <div class="card">
+                    <h2 class="card-heading">Peter Parker</h2>
                     <img src="../public/images/post1.jpg" class="card-img" alt="">
                 </div>
                 <div class="card">
+                    <h2 class="card-heading">Peter Parker</h2>
                     <img src="../public/images/post1.jpg" class="card-img" alt="">
                 </div>
                 <div class="card">
+                    <h2 class="card-heading">Peter Parker</h2>
                     <img src="../public/images/post1.jpg" class="card-img" alt="">
                 </div>
                 <div class="card">
+                    <h2 class="card-heading">Peter Parker</h2>
                     <img src="../public/images/post1.jpg" class="card-img" alt="">
                 </div>
             </div>
         </main>
-        <footer>
-
-        </footer>
-
     </div>
+    <footer class="footer">
+        <p>Copyrights &copy; Reserved 2025 </p>
+    </footer>
 
     <script src="../public/script.js"></script>
 </body>
